@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 export default async () => {
   try {
-    axios.get("https://cleaner-tomorrow.adaptable.app/sendmail")
+    await axios.get("https://localhost:3000/emailjs")
     console.log("Data Update Triggered!")
   } catch (error) {
     console.log(error);
@@ -13,5 +13,5 @@ export default async () => {
 };
 
 export const config = {
-    schedule: "@daily"
+    schedule: "@hourly"
 }
